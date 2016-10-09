@@ -7,13 +7,20 @@
 
     
 
-    <title></title>
+    <title>vagrant box 制作 | </title>
     <meta name="author" content="archer">
+    
+    <meta name="description" content="安装基本系统系统安装
+考虑点: hostname domain root password normal user’s name &amp;amp; password
+
+安装后
+
+安装必需软件 sudoer: vagrant ALL=(ALL) NOPASSWD:ALL openssh: useDNS配置（">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="vagrant box 制作"/>
     <meta property="og:site_name" content="avalone"/>
 
     
@@ -190,162 +197,66 @@
 
 
     <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+
         
 
-<div class="slider">
-    <ul class="slides">
-    
-       <li>
-           <a href="/">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/1">
-               <div class="caption center-align">
-                 <h4>This is our big Tagline!</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/2">
-               <div class="caption left-align">
-                 <h4>Left Aligned Caption</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/3">
-               <div class="caption right-align">
-                 <h4>Right Aligned Caption</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-   </ul>
- </div>
+        
+    </div>
+</nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
 
-
-<div id="article-list" class="container main-container">
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/10/09/vagrant-box-制作/">vagrant box 制作</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-10-09T15:11:22.000Z"><a href="/2016/10/09/vagrant-box-制作/">2016-10-09</a></time>
-
+            <div class="article-title">
                 
+    
+        <h1>vagrant box 制作</h1>
+    
 
 
-                
             </div>
+            <time class="pink-link-context" datetime="2016-10-09T15:11:22.000Z"><a href="/2016/10/09/vagrant-box-制作/">2016-10-09</a></time>
 
             
-        </div>
-</article>
 
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/09/16/elasticsearch笔记/">elasticsearch笔记</a></h1>
-    
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#安装基本系统"><span class="section table-of-contents-text">安装基本系统</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#系统安装"><span class="section table-of-contents-text">系统安装</span></a></li></ol></li></ol>
+</div>
 
 
-                </div>
+            <div class="entry pink-link-context">
+                <h2 id="安装基本系统"><a href="#安装基本系统" class="headerlink" title="安装基本系统"></a>安装基本系统</h2><h3 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h3><ol>
+<li><p>考虑点:<br> hostname<br> domain<br> root password<br> normal user’s name &amp; password</p>
+</li>
+<li><p>安装后</p>
+<ol>
+<li>安装必需软件<br> sudoer: vagrant ALL=(ALL) NOPASSWD:ALL<br> openssh: useDNS配置（软件必须，设置非必须），服务设置启动</li>
+<li>安装非必需软件<br> 编辑器如vim<br> 开发环境如lamp及相关设置<br> shell 及相关 zsh git curl…</li>
+<li>设置公钥<br> 安装公钥<a href="https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub" target="_blank" rel="external">vagrant公钥</a>到~/.ssh/authorized_keys<br> 设置.ssh 0600和.ssh/authorized_keys 0700权限</li>
+<li>安装provider相关<br> 如virtualbox 的virtualbox additionaltools</li>
+<li>环境清理<br> 如debian的apt-get clean</li>
+<li>关机及打包<br> virtualbox: vagrant package</li>
+</ol>
+</li>
+</ol>
 
-                <time class="pink-link-context" datetime="2016-09-16T08:31:41.000Z"><a href="/2016/09/16/elasticsearch笔记/">2016-09-16</a></time>
-
-                
-
-
-                
             </div>
-
-            
         </div>
+    </div>
 </article>
 
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/09/11/raytaylorism/">raytaylorism</a></h1>
-    
 
 
-                </div>
-
-                <time class="pink-link-context" datetime="2016-09-11T13:49:07.000Z"><a href="/2016/09/11/raytaylorism/">2016-09-11</a></time>
-
-                
 
 
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-        <article class="simple-article">
-        <div class="card">
-            <div class="card-content">
-                <div class="article-title">
-                    
-    
-        <h1 class="indigo-link-context"><a href="/2016/09/11/change-ssh-port-with-firewalld-selinux/">change_ssh_port_with_firewalld_selinux</a></h1>
-    
-
-
-                </div>
-
-                <time class="pink-link-context" datetime="2016-09-11T13:36:03.000Z"><a href="/2016/09/11/change-ssh-port-with-firewalld-selinux/">2016-09-11</a></time>
-
-                
-
-
-                
-            </div>
-
-            
-        </div>
-</article>
-
-    
-
-    <ul class="pagination center-align">
-    <li class="disabled">
-        <a href="/"><i class="fa fa-angle-left"></i></a>
-    </li>
-    
-    
-        <li class="active pink"><a href="/">1</a></li>
-    
-    
-    <li class="disabled">
-        <a href="/"><i class="fa fa-angle-right"></i></a>
-    </li>
- </ul>
 
 </div>
 
