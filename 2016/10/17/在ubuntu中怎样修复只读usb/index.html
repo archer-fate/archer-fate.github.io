@@ -7,13 +7,17 @@
 
     
 
-    <title>归档：2016/10 | </title>
+    <title>在ubuntu中怎样修复只读usb | </title>
     <meta name="author" content="archer">
+    
+    <meta name="description" content="How to fix read only USB pen drive in Ubuntu
+How to fix read only USB pen drive in Ubuntu
+While copying some large file I mistakenly taken out USB pen">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="在ubuntu中怎样修复只读usb"/>
     <meta property="og:site_name" content="avalone"/>
 
     
@@ -191,46 +195,60 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（归档）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>在ubuntu中怎样修复只读usb</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
-        
-        
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2016
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2016/10/17/在ubuntu中怎样修复只读usb/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-10-17T14:40:39.000Z">2016-10-17</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                在ubuntu中怎样修复只读usb
-                            </a>
-                        
-                            <a href="/2016/10/09/vagrant-box-制作/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-10-09T15:11:22.000Z">2016-10-09</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                vagrant box 制作
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
-        
-    </ul>
+            </div>
+            <time class="pink-link-context" datetime="2016-10-17T14:40:39.000Z"><a href="/2016/10/17/在ubuntu中怎样修复只读usb/">2016-10-17</a></time>
+
+            
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p>How to fix read only USB pen drive in Ubuntu</p>
+<p>How to fix read only USB pen drive in Ubuntu</p>
+<p>While copying some large file I mistakenly taken out USB pen drive before the copy get completed.Later I again attached the USB pen drive in Ubuntu system but found that the USB pen drive showing read only filesystem message. I was not able to copy,create and delete any file.To solve this issue I followed some steps which I am sharing with this post.</p>
+<p>To fix USB pen drive read only in Ubuntu,follow the given below steps</p>
+<p>Step 1: Attach USB pen drive in system’s USB port. Automatically the Ubuntu will mount the USB pen drive and show icon on Desktop or Menu bar.</p>
+<p>Open the terminal and become super user by running below given command<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo su -</div></pre></td></tr></table></figure></p>
+<p>Step 2: First we have to find out in which directory the USB pen drive has been automatically mounted.For this run the df -Th command.<br>In given below output you can see,in my system the USB pen drive is mounted in /media/linux/C38C-099C ,partition is /dev/sdd1 and filesystem is vfat.</p>
+<p>Note: When you run df -Th command in your system,the USB pen drive may mount in different directory and the partition might also be different.Hence the output value which you will get, use the same values in further steps.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">root@tuxworld:~<span class="comment"># df -Th</span></div><div class="line">Filesystem     Type      Size  Used Avail Use% Mounted on</div><div class="line">/dev/sda5      ext4       28G   25G  1.3G  96% /</div><div class="line">udev           devtmpfs  2.0G  4.0K  2.0G   1% /dev</div><div class="line">tmpfs          tmpfs     796M  1.1M  795M   1% /run</div><div class="line">none           tmpfs     5.0M  8.0K  5.0M   1% /run/lock</div><div class="line">none           tmpfs     2.0G  528K  2.0G   1% /run/shm</div><div class="line">none           tmpfs     100M  104K  100M   1% /run/user</div><div class="line">cgroup         tmpfs     2.0G     0  2.0G   0% /sys/fs/cgroup</div><div class="line">/dev/sda7      ext4      9.2G  8.2G  539M  94% /partition7</div><div class="line">/dev/sda8      ext3       46G   38G  6.2G  86% /partition8</div><div class="line">/dev/sda9      ext3       74G   67G  3.1G  96% /partition9</div><div class="line">/dev/sda21     ext4       14G  4.9G  8.3G  37% /partition10</div><div class="line">/dev/sdd1      vfat       15G   12G  3.6G  77% /media/linux/C38C-099C </div><div class="line">``` </div><div class="line"></div><div class="line">Step 2: Now unmount the directory <span class="keyword">in</span> <span class="built_in">which</span> the USB pen drive is automatically mounted . (As you can see mounted directory path <span class="keyword">in</span> above ‘Step 1’)</div><div class="line"></div><div class="line">Note: Replace the/media/linux/C38C-099C with the mounted USB pen drive directory path <span class="built_in">which</span> is showing output <span class="keyword">in</span> your system after running df -Th command.</div><div class="line">``` bash</div><div class="line">umount /media/linux/C38C-099C</div><div class="line">``` </div><div class="line"></div><div class="line"></div><div class="line">Step 3: As we know the USB pen drive got /dev/sdd1 partition</div><div class="line">and filesystem is vfat(see <span class="keyword">in</span> Step 1). Now we will run dosfsck <span class="built_in">command</span> to check and repair the filesystem</div><div class="line"></div><div class="line">Note: The dosfsck <span class="built_in">command</span> check and repair MS-DOS filesystems.Because the filesystem of USB pen drive is vfat hence we are using this <span class="built_in">command</span></div><div class="line">``` bash</div><div class="line">dosfsck <span class="_">-a</span> /dev/sdd1</div></pre></td></tr></table></figure></p>
+<p>Step 4: After the dosfsck command get completed.Remove the USB pen drive from system and then re-attach back to system.Now your USB pen drive should working and it should not have read only filesystem.</p>
+<p>Note** After mounting the USB pen drive you may see a new file with extension .REC which was created because of dosfsck command.</p>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
